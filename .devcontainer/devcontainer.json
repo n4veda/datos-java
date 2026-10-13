@@ -1,0 +1,14 @@
+{
+  "name": "Entorno Java Latest",
+  "image": "mcr.microsoft.com/devcontainers/java:latest",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "vscjava.vscode-maven",
+        "vscjava.vscode-java-debug"
+      ]
+    }
+  },
+  "postCreateCommand": "java --version"
+}
