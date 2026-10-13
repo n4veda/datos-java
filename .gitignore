@@ -1,0 +1,13 @@
+# Archivos compilados de Java
+*.class
+*.log
+
+# Carpetas de compilación
+bin/
+target/
+build/
+
+# Configuraciones locales
+.vscode/
+.idea/
+*.swp
