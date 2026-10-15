@@ -19,7 +19,7 @@ class Pila {
         }
         return false;
     }
-    public void inserta (int valor) {
+    public void insertar (int valor) {
         if (!verificaLlena()) {
             pila[indice] = valor;
             indice = indice + 1;
@@ -62,7 +62,7 @@ public class PILA {
                     case 1:
                         System.out.print("Ingrese un valor a insertar: ");
                         int valor = scanner.nextInt();
-                        pila.inserta(valor);
+                        pila.insertar(valor);
                         break;
                     case 2:
                         pila.borrar();
