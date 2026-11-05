@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 class Pila {
     int LimitePila = 10;
     int[] pila = new int[LimitePila];
@@ -38,7 +37,7 @@ class Pila {
             return;
         }
         System.out.println("Elementos de la pila:");
-        for (int i = 0; i < indice; i++) {
+        for (int i = indice - 1; i >= 0; i--) {
             System.out.println("pila[" + i + "] = " + pila[i]);
         }
     }
