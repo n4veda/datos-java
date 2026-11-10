@@ -50,7 +50,7 @@ class Cola {
     }
 }
 
-public class Main {
+public class cola {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Cola miCola = new Cola();

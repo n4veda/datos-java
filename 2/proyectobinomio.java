@@ -27,4 +27,4 @@ public class proyectobinomio {
         System.out.println();
         sc.close();
     }
-}
+}               
