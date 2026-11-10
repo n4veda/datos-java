@@ -16,7 +16,7 @@ class Cola {
 
     public boolean verificavacio() {
         if (frente == fin) {
-            System.out.println("Cola está vacía");
+            System.out.println("Cola esta vacia");
             return true;
         }
         return false;
@@ -43,7 +43,7 @@ class Cola {
             return;
         }
         System.out.print("Elementos de la Cola: ");
-        for (int i = frente; i < fin; i++) {
+        for (int i = fin - 1; i >= frente; i--) {
             System.out.print("[" + cola[i] + "] ");
         }
         System.out.println();
@@ -57,7 +57,7 @@ public class cola {
         int opcion = 0;
 
         do {
-            System.out.println("\n--- Menú Principal ---");
+            System.out.println("\n--- menu principal ---");
             System.out.println("1. Insertar");
             System.out.println("2. Borrar");
             System.out.println("3. Listar");
@@ -83,10 +83,10 @@ public class cola {
                         System.out.println("Saliendo del programa...");
                         break;
                     default:
-                        System.out.println("Opción no válida. Intente de nuevo.");
+                        System.out.println("Opcion no válida. Intente de nuevo.");
                 }
             } else {
-                System.out.println("Por favor, ingrese un número válido.");
+                System.out.println("Por favor, ingrese un numero valido.");
                 scanner.next();
             }
         } while (opcion != 4);
