@@ -11,9 +11,9 @@ public class Dinamico {
 
         System.out.print("Cuantos usuarios deseas capturar?: ");
         int cantidad = teclado.nextInt();
-        teclado.nextLine(); 
+        teclado.nextLine();
 
-      
+
         for (int i = 0; i < cantidad; i++) {
             System.out.println("\n--- Captura de usuario " + (i + 1) + " de " + cantidad + " ---");
 
@@ -22,7 +22,7 @@ public class Dinamico {
 
             System.out.print("edad: ");
             int edad = teclado.nextInt();
-            teclado.nextLine(); 
+            teclado.nextLine();
 
             System.out.print("correo: ");
             String correo = teclado.nextLine();

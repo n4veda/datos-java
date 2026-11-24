@@ -63,7 +63,7 @@ public class cola {
             System.out.println("3. Listar");
             System.out.println("4. Salir");
             System.out.print("Elija una opción: ");
-            
+
             if (scanner.hasNextInt()) {
                 opcion = scanner.nextInt();
 

@@ -13,7 +13,7 @@ public class Datos {
         this.correo = correo;
     }
 
-    
+
     public Datos() {}
 
     public String getNombre() {

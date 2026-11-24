@@ -1,6 +1,6 @@
 public class Ejem10Dato {
     String nombre;
-    int edad;  
+    int edad;
     String correo;
 
     public Ejem10Dato(String nombre, int edad, String correo) {
@@ -19,12 +19,12 @@ public class Ejem10Dato {
     public void setCorreo(String correo) {
         this.correo = correo;
     }
-    
+
     public String getNombre() {
         return nombre;
     }
     public int getEdad() {
-        return edad;    
+        return edad;
     }
     public String getCorreo() {
         return correo;

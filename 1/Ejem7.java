@@ -58,7 +58,7 @@ private void concatenar() {
         System.out.println("Que operacion desea realizar?: ");
         opcion = scanner.nextInt();
         switch (opcion) {
-            case 1: 
+            case 1:
             if (valor1 instanceof Integer && valor2 instanceof Integer){
                     int val1 = Integer.parseInt(valor1.toString());
                     int val2 = Integer.parseInt(valor2.toString());
@@ -75,8 +75,8 @@ private void concatenar() {
                     System.out.println("La suma es: " + (val1 + val2));
             }
             break;
-    
-            case 2: 
+
+            case 2:
             if (valor1 instanceof Integer && valor2 instanceof Integer){
                     int val1 = Integer.parseInt(valor1.toString());
                     int val2 = Integer.parseInt(valor2.toString());
@@ -94,7 +94,7 @@ private void concatenar() {
             }
                 break;
 
-            case 3: 
+            case 3:
             if (valor1 instanceof Integer && valor2 instanceof Integer){
                     int val1 = Integer.parseInt(valor1.toString());
                     int val2 = Integer.parseInt(valor2.toString());
@@ -111,12 +111,12 @@ private void concatenar() {
                     System.out.println("La multiplicacion es: " + (val1 * val2));
             }
                 break;
-            
+
                 default:
                 System.out.println("Opcion no valida");
         }
     }
-    
+
     public void mostrarValores() {
         System.out.println("Valor 1: " + valor1);
         System.out.println("Valor 2: " + valor2);

@@ -18,7 +18,7 @@ public class ejem5 {
 
         Object obj2;
 
-        
+
 
         if (dato1.equalsIgnoreCase("true")
 
@@ -77,7 +77,7 @@ public class ejem5 {
 
         int operacion = entrada.nextInt();
 
-        // MANDAR A LLAMAR A Ejem6
+
 
         Ejem6<Object, Object> obj =
 

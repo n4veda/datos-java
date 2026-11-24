@@ -17,14 +17,14 @@ public class ListaSimple<T> implements Iterable<T> {
         return tamaño;
     }
 
-    // ---------- Inserción ----------
+
 
     public void insertarInicio(T dato) {
         Nodo<T> nuevo = new Nodo<>(dato);
         nuevo.siguiente = cabeza;
         cabeza = nuevo;
 
-        if (cola == null) cola = nuevo; // la lista estaba vacía
+        if (cola == null) cola = nuevo;
 
         tamaño++;
     }
@@ -59,13 +59,13 @@ public class ListaSimple<T> implements Iterable<T> {
         Nodo<T> anterior = nodoEn(pos - 1);
         Nodo<T> nuevo = new Nodo<>(dato);
 
-        nuevo.siguiente = anterior.siguiente; // 1° enlazar el nuevo con el resto
-        anterior.siguiente = nuevo;           // 2° enlazar el anterior con el nuevo
+        nuevo.siguiente = anterior.siguiente;
+        anterior.siguiente = nuevo;
 
         tamaño++;
     }
 
-    // ---------- Eliminación ----------
+
 
     public T eliminarInicio() {
         if (estaVacia()) throw new NoSuchElementException("Lista vacía");
@@ -73,7 +73,7 @@ public class ListaSimple<T> implements Iterable<T> {
         T dato = cabeza.dato;
         cabeza = cabeza.siguiente;
 
-        if (cabeza == null) cola = null; // quedó vacía
+        if (cabeza == null) cola = null;
 
         tamaño--;
         return dato;
@@ -84,7 +84,7 @@ public class ListaSimple<T> implements Iterable<T> {
 
         if (tamaño == 1) return eliminarInicio();
 
-        Nodo<T> penultimo = nodoEn(tamaño - 2); // O(n): no hay enlace hacia atrás
+        Nodo<T> penultimo = nodoEn(tamaño - 2);
         T dato = cola.dato;
 
         penultimo.siguiente = null;
@@ -109,7 +109,7 @@ public class ListaSimple<T> implements Iterable<T> {
             anterior = anterior.siguiente;
         }
 
-        if (anterior.siguiente == null) return false; // no se encontró
+        if (anterior.siguiente == null) return false;
 
         if (anterior.siguiente == cola) cola = anterior;
 
@@ -119,7 +119,7 @@ public class ListaSimple<T> implements Iterable<T> {
         return true;
     }
 
-    // ---------- Consulta ----------
+
 
     public T obtener(int pos) {
         if (pos < 0 || pos >= tamaño)
@@ -144,7 +144,7 @@ public class ListaSimple<T> implements Iterable<T> {
         return indiceDe(dato) != -1;
     }
 
-    // ---------- Operación clásica: invertir ----------
+
 
     public void invertir() {
         Nodo<T> anterior = null, actual = cabeza;
@@ -160,7 +160,7 @@ public class ListaSimple<T> implements Iterable<T> {
         cabeza = anterior;
     }
 
-    // ---------- Utilidades ----------
+
 
     private Nodo<T> nodoEn(int pos) {
         if (pos < 0 || pos >= tamaño)
@@ -207,7 +207,7 @@ public class ListaSimple<T> implements Iterable<T> {
         return sb.append("null").toString();
     }
 
-    // ---------- Programa de prueba ----------
+
 
     public static void main(String[] args) {
 
@@ -218,33 +218,33 @@ public class ListaSimple<T> implements Iterable<T> {
         lista.insertarInicio(10);
         lista.insertarEn(2, 25);
 
-        System.out.println(lista);  // 10 -> 20 -> 25 -> 30 -> null
+        System.out.println(lista);
 
         lista.eliminar(20);
         lista.eliminarFinal();
 
-        System.out.println(lista);  // 10 -> 25 -> null
+        System.out.println(lista);
 
         lista.invertir();
 
-        System.out.println(lista);  // 25 -> 10 -> null
+        System.out.println(lista);
 
-        System.out.println(lista.indiceDe(10));  // 1
-        System.out.println(lista.contiene(99));  // false
-        System.out.println(lista.tamaño());      // 2
+        System.out.println(lista.indiceDe(10));
+        System.out.println(lista.contiene(99));
+        System.out.println(lista.tamaño());
 
-        // Casos borde: vaciar la lista y volver a usarla
+
 
         lista.eliminarInicio();
         lista.eliminarFinal();
 
-        System.out.println(lista.estaVacia()); // true
+        System.out.println(lista.estaVacia());
 
         lista.insertarFinal(7);
 
-        System.out.println(lista); // 7 -> null
+        System.out.println(lista);
 
-        // Recorrido con for-each (gracias a Iterable<T>)
+
 
         ListaSimple<String> nombres = new ListaSimple<>();
 
@@ -254,7 +254,7 @@ public class ListaSimple<T> implements Iterable<T> {
         for (String n : nombres)
             System.out.println(n);
 
-        // Excepción esperada
+
 
         try {
             nombres.obtener(5);
@@ -264,7 +264,7 @@ public class ListaSimple<T> implements Iterable<T> {
     }
 }
 
-/** Nodo de la lista: guarda el dato y la referencia al siguiente nodo. */
+
 class Nodo<T> {
     T dato;
     Nodo<T> siguiente;

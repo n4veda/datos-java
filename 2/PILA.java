@@ -53,7 +53,7 @@ public class PILA {
             System.out.println("3. Listar");
             System.out.println("4. Salir");
             System.out.print("Elige una opción: ");
-            
+
             if (scanner.hasNextInt()) {
                 opcion = scanner.nextInt();
 
@@ -77,7 +77,7 @@ public class PILA {
                 }
             } else {
                 System.out.println("Por favor, ingrese un número válido.");
-                scanner.next(); 
+                scanner.next();
             }
         } while (opcion != 4);
         scanner.close();

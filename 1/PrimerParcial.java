@@ -38,7 +38,7 @@ class validartipo {
                 System.out.println("ingresaste un float");
                 return;
             } catch (NumberFormatException e) {
-               
+
             }
         }
         try {
@@ -49,7 +49,7 @@ class validartipo {
         } catch (NumberFormatException e) {
         }
         if (input.length() == 1) {
-            
+
             contenervalor<Character> contenedor = new contenervalor<>(input.charAt(0));
             System.out.println("ingresaste un char");
             return;

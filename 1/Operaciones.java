@@ -16,7 +16,7 @@ public class Operaciones<T> {
 
     public void operar(String operacion) {
 
-        // Si los dos objetos son números
+
 
         if (obj1 instanceof Number && obj2 instanceof Number) {
 
@@ -42,7 +42,7 @@ public class Operaciones<T> {
 
             }
 
-        // Si son cadenas o caracteres
+
 
         } else if ((obj1 instanceof String || obj1 instanceof Character) &&
 
@@ -62,7 +62,7 @@ public class Operaciones<T> {
 
             }
 
-        // Si alguno es Boolean
+
 
         } else if (obj1 instanceof Boolean || obj2 instanceof Boolean) {
 
@@ -72,7 +72,7 @@ public class Operaciones<T> {
 
             );
 
-        // Si son tipos diferentes
+
 
         } else {
 
@@ -98,7 +98,7 @@ public class Operaciones<T> {
 
         Object obj2;
 
-        // Detectar el tipo del primer dato
+
 
         if (dato1.equalsIgnoreCase("true") ||
 
@@ -120,7 +120,7 @@ public class Operaciones<T> {
 
         }
 
-        // Detectar el tipo del segundo dato
+
 
         if (dato2.equalsIgnoreCase("true") ||
 
@@ -150,7 +150,7 @@ public class Operaciones<T> {
 
         String operacion = entrada.nextLine();
 
-        // Crear el objeto genérico
+
 
         Operaciones<Object> objetos =
 
